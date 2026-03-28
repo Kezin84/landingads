@@ -17,7 +17,6 @@ const links = {
   android: 'https://doawload.kingwin.pro/KINGWIN.apk',
 }
 
-const suits = ['\u2660', '\u2665', '\u2666', '\u2663']
 
 const carouselOffset = computed(() => {
   // Each card ~140px + 16px gap, center the active card
@@ -38,21 +37,6 @@ function selectCard(idx: number) {
 
 <template>
   <div class="landing" :class="{ loaded: isLoaded }">
-
-    <!-- Floating card suits -->
-    <div class="suits-bg">
-      <div
-        v-for="i in 80"
-        :key="i"
-        class="suit"
-        :style="{
-          left: (Math.random() * 100) + '%',
-          animationDelay: (Math.random() * 10) + 's',
-          animationDuration: (8 + Math.random() * 10) + 's',
-          fontSize: (20 + Math.random() * 35) + 'px',
-        }"
-      >{{ suits[i % 4] }}</div>
-    </div>
 
     <!-- Sparkle particles -->
     <div class="sparkles">
@@ -178,22 +162,6 @@ function selectCard(idx: number) {
   background: #1a0530;
 }
 
-/* ===== FLOATING SUITS ===== */
-.suits-bg {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.suit {
-  position: absolute;
-  bottom: -40px;
-  color: rgba(224, 64, 251, 0.15);
-  animation: card-float linear infinite;
-  user-select: none;
-  filter: blur(0.5px);
-}
 
 /* ===== SPARKLE PARTICLES ===== */
 .sparkles {
