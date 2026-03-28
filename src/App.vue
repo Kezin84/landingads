@@ -71,9 +71,9 @@ function selectCard(idx: number) {
       ></div>
     </div>
 
-    <!-- Vegas BG (Full HD) -->
+    <!-- Vegas BG -->
     <div class="vegas-bg">
-      <img src="https://images.unsplash.com/photo-1606404768285-d8aa1482023a?auto=format&fit=crop&w=2560&q=100" alt="" />
+      <img src="/images/lasvegas-bg.png" alt="" />
       <div class="vegas-overlay"></div>
     </div>
 
